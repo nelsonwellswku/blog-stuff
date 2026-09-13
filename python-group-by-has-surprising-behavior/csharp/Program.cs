@@ -23,8 +23,8 @@ public class Program
         foreach (var group in grouped_friends)
         {
             var coupleId = group.Key;
-            var names = string.Join(" ", group.Select(x => x.Name));
-            Console.WriteLine($"{coupleId} {names}");
+            var names = string.Join(" loves ", group.Select(x => x.Name));
+            Console.WriteLine($"{coupleId} --> {names}");
         }
     }
 }

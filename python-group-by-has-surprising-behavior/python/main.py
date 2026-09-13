@@ -13,7 +13,7 @@ def main():
     friends_groups = groupby(friends, lambda x: x["couple_id"])
 
     for (key, grouping) in friends_groups:
-        print(key, "-->", " ".join([obj["name"] for obj in grouping]))
+        print(key, "-->", " loves ".join([obj["name"] for obj in grouping]))
 
 
 if __name__ == "__main__":
