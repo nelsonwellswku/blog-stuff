@@ -15,6 +15,13 @@ def main():
     for (key, grouping) in friends_groups:
         print(key, "-->", " loves ".join([obj["name"] for obj in grouping]))
 
+    #---------
+
+    sorted_friends = sorted(friends, key=lambda x: x["couple_id"])
+    sorted_friends_groups = groupby(sorted_friends, lambda x: x["couple_id"])
+
+    for (key, grouping) in sorted_friends_groups:
+        print(key, "-->", " loves ".join([obj["name"] for obj in grouping]))
 
 if __name__ == "__main__":
     main()
