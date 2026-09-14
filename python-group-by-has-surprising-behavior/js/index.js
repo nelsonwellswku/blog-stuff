@@ -8,7 +8,7 @@ const friends = [
 ];
 
 const friendsGroups = Map.groupBy(friends, (x) => x.coupleId);
-// console.log(friendsGroups);
+
 for (const [key, grouping] of friendsGroups) {
   console.log(key, "-->", grouping.map((obj) => obj.name).join(" loves "));
 }
